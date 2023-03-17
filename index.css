@@ -198,3 +198,111 @@ color: #161616;
 }
 
 
+/*** Vans List ***/
+
+.vanslist--content{
+    padding: 27px;
+    background-color:#FFF7ED;
+    display: block;
+}
+
+.vans--listing{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.vamslist--quote{
+ 
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 34px;
+
+    color: #161616;
+}
+
+.vanslist--filter{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.filters{
+    margin: 10px;
+    padding: 7px 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #4D4D4D;
+    background-color: #FFEAD0;
+    border-radius: 5px;
+}
+
+.clear--filters{
+    margin: 10px;
+    padding: 7px 25px;
+    text-decoration: underline;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #4D4D4D;
+    border-radius: 5px;
+}
+
+.van{
+    margin-top: 60px;
+}
+
+.van--info{
+    /* display: flex; */
+}
+
+.description{
+    margin: 0;
+}
+
+.van--name{
+    margin-right: 30px;
+}
+
+.day{
+    width: 225px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+
+    margin: 0;
+
+    color: #161616;
+
+}
+
+.van--type{
+    width: 85.71px;
+    height: 33.89px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    /* line-height: 32px; */
+    text-align: center;
+    color: #FFEAD0;
+    
+    background: #E17654;
+    border-radius: 5px;
+
+}
+
+.van--name, .van--price{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+
+    color: #161616;
+}
