@@ -19,7 +19,7 @@ export default  function About(){
                 <div className='about--container'>
                     <p className='about--quote2'>Your destination is waiting.</p>
                     <p className='about--quote2'>Your van is ready.</p>
-                    <Link to="vans" className='btn--explore'>Explore our vans</Link>
+                    <Link to="/vans" className='btn--explore'>Explore our vans</Link>
                 </div>
             </div>
         </main>

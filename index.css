@@ -102,10 +102,6 @@ body::-webkit-scrollbar {
     transition: transform .1s ease-in-out;
 }
 
-.btn--find:hover{
-    transform: translate(1px, 1px);
-}
-
 /*** About PAGE ***/
 
 .about--content{
@@ -177,8 +173,9 @@ color: #161616;
     margin-top: 25px;
 }
 
-.btn--explore:hover {
+.btn--explore, .btn--find, .btn--rentVan:hover {
     transform: translate(1px, 1px);
+    color:#FFEAD0;
 }
 
 .btn--explore a {
@@ -209,11 +206,11 @@ color: #161616;
 .vans--listing{
     display: grid;
     grid-template-columns: auto auto auto auto;
+    margin-top: 60px;
+    gap: 30px;
 }
 
-.vamslist--quote{
- 
-
+.vanslist--quote{
     font-weight: 700;
     font-size: 32px;
     line-height: 34px;
@@ -238,6 +235,8 @@ color: #161616;
     color: #4D4D4D;
     background-color: #FFEAD0;
     border-radius: 5px;
+    cursor: pointer;
+    
 }
 
 .clear--filters{
@@ -252,22 +251,36 @@ color: #161616;
 
     color: #4D4D4D;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .van{
-    margin-top: 60px;
+    width: 230px;
+    
 }
 
+.vanDetails--link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.van--image{
+    width: 230px;
+    height: 230px;
+    border-radius: 5px;
+}
 .van--info{
-    /* display: flex; */
+    
 }
 
 .description{
     margin: 0;
+    display: flex;
 }
 
-.van--name{
-    margin-right: 30px;
+.van--price{
+    margin-left: auto;
+    text-align: right;
 }
 
 .day{
@@ -288,13 +301,31 @@ color: #161616;
     padding: 5px 10px;
     font-weight: 600;
     font-size: 16px;
-    /* line-height: 32px; */
     text-align: center;
-    color: #FFEAD0;
-    
-    background: #E17654;
+    text-transform: capitalize;
+    color: white;
     border-radius: 5px;
+}
 
+.van--type.rugged{
+    background-color: #115E59;
+}
+
+.van--type.simple{
+    background-color: #E17654;;
+}
+
+.van--type.luxury{
+    background-color: #161616;
+}
+
+.van--type:hover{
+    color:#FFEAD0;
+}
+
+.van--type{
+    width: 85.71px;
+    height: 33.89px;
 }
 
 .van--name, .van--price{
@@ -306,3 +337,70 @@ color: #161616;
 
     color: #161616;
 }
+
+.footer--vanlife{
+    display: flex;
+    height: 74.75px;
+    align-items: center;
+    background: #252525;
+}
+
+.copyright--text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 auto;
+    text-align: center;
+
+    color: #AAAAAA;
+
+}
+
+/***Van Details***/
+
+.vanDetails--page{
+    width: 100%;
+    /* padding: 30px; */
+    background-color: #FFF7ED;
+}
+
+.selectedVan--image{
+    width: 500px;
+    height: 500px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+.van--details{
+    width: 500px;
+    margin: 0 auto 50px  auto;
+}
+
+.selected--day{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn--rentVan{
+    text-decoration: none;
+    width: 500px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FF8C38;
+    border-radius: 5px;
+    color: white;
+    transition: transform .1s ease-in-out;
+}
+
+.back--link{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
