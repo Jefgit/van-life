@@ -1,11 +1,18 @@
 import React from "react"
 import {useParams, Link} from "react-router-dom"
 
-export default function VanDetail(props){
+export default function VanDetail(){
     const params = useParams()
-    let selectedVan = props.vans.find(van => van.id ===params.id)
-     
+    const [selectedVan, setSelectedVan] = React.useState(null)
+
+    React.useEffect(() => {
+        fetch(`/api/vans/${params.id}`)
+            .then(res => res.json())
+            .then(data => setSelectedVan(data.vans))
+    },[params.id])
+
     return(
+        selectedVan === null ? <h1>Loading...</h1> :(
         <div className="vanDetails--page"> 
             <div className="van--details">
                 <Link to="/vans" className="back--link">&larr; Back to all vans</Link>
@@ -16,7 +23,8 @@ export default function VanDetail(props){
                 <p>{selectedVan.description}</p>
                 <Link className="btn--rentVan">Rent this van</Link>
             </div>
-        </div>
+        </div>)
+        
         
     )
 }
