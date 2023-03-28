@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import aboutpic from '../assets/aboutpic.png'
 
 export default  function About(){
     return(
         <main className='about--content'>
-            <img className='about--image' src="./src/assets/aboutpic.png" alt="" />
+            <img className='about--image' src={aboutpic} alt="" />
             <div className='about--mission'>
                 <h1 className='about--quote1'>Don’t squeeze in a sedan when you could relax in a van.</h1>
                 <p className='text--mission1'>
