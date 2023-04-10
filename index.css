@@ -64,6 +64,10 @@ a.link--active {
    color: #161616;
 }
 
+.login--icon{
+    width: 1.5rem;
+}
+
 /*** HOME PAGE ***/
 .content--home{
     min-height: 480px;
@@ -310,12 +314,42 @@ color: #161616;
     background-color: #115E59;
 }
 
+.filters.rugged:hover{
+    background-color: #115E59;
+    color:#FFEAD0;
+}
+
+.filters.rugged.selected{
+    background-color: #115E59;
+    color:#FFEAD0;
+}
+
 .van--type.simple{
-    background-color: #E17654;;
+    background-color: #E17654;
+}
+
+.filters.simple:hover{
+    background-color: #E17654;
+    color:#FFEAD0;
+}
+
+.filters.simple.selected{
+    background-color: #E17654;
+    color:#FFEAD0;
 }
 
 .van--type.luxury{
     background-color: #161616;
+}
+
+.filters.luxury:hover{
+    background-color: #161616;
+    color:#FFEAD0;
+}
+
+.filters.luxury.selected{
+    background-color: #161616;
+    color:#FFEAD0;
 }
 
 .van--type:hover{
@@ -543,4 +577,334 @@ nav.vanhost--links :hover{
 
 .vanhost--details{
     font-weight: 500;
+}
+
+/***Page Not Found***/
+.notfound--text{
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 42px;
+
+    color: #161616;
+}
+
+.return--link{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 550px;
+    height: 65px;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161616;
+    color:#FFFFFF;
+    border-radius: 10px;
+}
+
+.notfound-page{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 73vh;
+    background-color: #FFF7ED;
+}
+
+/***Login Page***/
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 73vh;
+    background-color: #FFF7ED;
+
+}
+
+.login--text{
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.login--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.username--input, .password--input{
+    font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px 13px;
+
+    width: 494px;
+    height: 42px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px 6px 0px 0px;
+
+    flex: none;
+
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.username--input{
+    border-radius: 6px 6px 0px 0px;
+    order: 0;
+}
+.password--input{
+    border-radius: 0px 0px 6px 6px;
+    order: 1;
+}
+
+.signin--button{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 494px;
+    height: 55px;
+
+    background: #FF8C38;
+    /* shadow/sm */
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 22px 0 22px 0;
+    cursor: pointer;
+}
+
+.create-account-link{
+    color: #FF8C38;
+    cursor: pointer;
+}
+
+.message--text{
+    color: red;
+}
+
+/* Dashboard */
+.income--info{
+    display: flex;
+    padding: 1.7rem;
+    flex-direction: column;
+    background-color: #FFEAD0;
+    column-gap: 2em;
+}
+
+.income--history{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.income-history-text{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+.income-history-days{
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: #4D4D4D;
+
+}
+
+.welcome--text{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 22px;
+    margin: 0;
+    /* identical to box height, or 61% */
+    color: #161616;
+}
+
+.detail--link{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: auto;
+
+    color: #161616;
+
+}
+
+.income--amount{
+    font-weight: 800;
+    font-size: 3rem;
+
+    color: #161616;
+}
+
+.review--score{
+    display: flex;
+    padding: 1.7rem;
+    align-items: center;
+    background: #FFDDB2;
+
+}
+
+.star{
+    font-size: 1em;
+    color:#FF8C38;
+    margin: 0;
+    align-self: center;
+}
+
+.review--text{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+
+    color: #161616;
+}
+
+.user--rate{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+
+    color: #161616;
+}
+
+.rate{
+    margin-left: 1em;
+    font-weight: 700;
+    font-size: 20px;
+    color: #4D4D4D;
+}
+
+.listed--vans{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Income */
+.income-page{
+    background: #FFF7ED;
+}
+
+.income-page-details{
+    padding: 1.7rem;
+}
+
+.graph{
+    padding: 1.7em;
+}
+
+.graph-image{
+    width: 50vw;
+    text-align: center;
+}
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    padding: 1.7em;
+    row-gap: 2em;
+}
+
+.transaction-history{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.incomepage-history-text{
+    margin-left: auto;
+}
+
+.record{
+    display: flex;
+    align-items: center;
+    height: 6em;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+.record-date{
+    margin-left: auto;
+}
+
+.transaction-records{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+/* Reviews */
+.reviews{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 2em;
+    background-color: #FFF7ED;
+}
+
+.reviews-history{
+    display: flex;
+    align-items: center;
+}
+
+.reviews-title{
+    font-weight: 700;
+    font-size: 32px;
+    color: #161616;
+
+    margin: 0;
+}
+.reviews-days{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4D4D4D;
+    margin: 0 0 0 1em;
+}
+
+.reviews-history-days{
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: #4D4D4D;
+}
+
+.date-name-details{
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-name{
+    font-weight: 600;
+    font-size: 1em;
+    margin: 1em 0;
+    color: #161616;
+}
+.date-posted{
+    font-weight: 500;
+    font-size: 1em;
+    color: #8C8C8C;
+}
+
+.review-record{
+    margin-top: 1.5em;
+    border-bottom:1px solid #C7C7C7;
+}
+
+.comment{
+    margin-top: 0;
 }

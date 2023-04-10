@@ -1,5 +1,11 @@
 import React from "react"
-import { Link, Outlet, NavLink } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
+import { requireAuth } from "../utils"
+
+export async function loader({request}){
+    await requireAuth(request)
+    return null
+}
 
 export default function HostLayout(){
     const activeStyle = {
