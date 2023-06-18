@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import Icon from "../assets/Icon.svg"
 
 export default function Header(){
-  const [showPanel, setShowPanel] = useState("")
+  const [showPanel, setShowPanel] = useState("hide-panel")
   const isLoggedIn = JSON.parse(localStorage.getItem('loggedin'))
 
   function fakeLogOut() {
