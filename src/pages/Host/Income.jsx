@@ -34,7 +34,7 @@ export default function Income(){
             </section>
             <section className="transactions">
                 <div className="transaction-history">
-                    <h2>Your transactions<span>({transactions.length})</span></h2>
+                    <h2 className="transaction-title">Your transactions<span>({transactions.length})</span></h2>
                     <h4 className="income-history-text incomepage-history-text">Last <span className="income-history-days">30 days</span></h4>
                 </div>
                 <div className="transaction-records">

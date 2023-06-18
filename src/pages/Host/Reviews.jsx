@@ -45,7 +45,7 @@ export default function Reviews(){
                 <p className="reviews-days">Last <span className="reviews-history-days">30 days</span></p>
             </section>
             <section className="rating-graph">
-                <img src={rating} alt="" />
+                <img className="ratings-image" src={rating} alt="" />
             </section>
             <section className="review-details">
                 <h2>Reviews <span>({reviewRecords.length})</span></h2>

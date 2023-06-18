@@ -18,14 +18,15 @@ body{
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
+
 /*** Navigation ***/
 .vanlife--logo{
     color: black;
     margin-right: auto;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 30px;
+    font-size: clamp(1.5em,5vw,2em);
 }
 
 .header--vanlife a {
@@ -37,9 +38,10 @@ body::-webkit-scrollbar {
 .header--vanlife{
     display: flex;
     flex-flow: row;
-    height: 112px;
+    height: clamp(5rem, 10vh, 7.5rem);
+    /* max-height: 7rem; */
     align-items: center;
-    padding: 0 30px;
+    padding: 0 2em;
 
     background: #FFF7ED;
 }
@@ -50,11 +52,35 @@ body::-webkit-scrollbar {
 }
 
 .nav--vanlife{
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     display: flex;
-    gap: 20px;
+    gap: 1.25em;
     color: #4D4D4D;
+}
+
+.nav--mobile{
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* height: 100vh; */
+    background-color: white;
+    gap: 1.5em;
+    background-color: #FFF7ED;
+    color: #161616;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    align-items: center;
+    padding: .6em;
+    z-index: 99999;
+}
+
+.hide-panel{
+    display: none;
 }
 
 
@@ -68,9 +94,39 @@ a.link--active {
     width: 1.5rem;
 }
 
+.login--icon-mobile{
+    width: 1.5em;
+}
+
+.bars-container{
+    width: 2.3em;
+    height: 2.3em;
+}
+
+.close{
+    width: 1.3em;
+    height: 1.3em;
+    align-self: self-end;
+}
+
+.btn-out{
+    background-color: #E17654;
+    /* padding: 1em; */
+    font-size: .8em;
+    width: 5em;
+    height: 2em;
+    padding: 5px 10px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    border-radius: .5em;
+    margin-top: 3em;
+}
+
 /*** HOME PAGE ***/
 .content--home{
-    min-height: 480px;
+    min-height: 45em;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("./src/assets/bghome.png") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
@@ -119,12 +175,10 @@ a.link--active {
 }
 
 .about--quote1{
-    width: 494.33px;
-    height: 76px;
-
+    max-width: 30em;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 2em;
+    line-height: 1.25em;
 
 
 color: #161616;
@@ -204,7 +258,7 @@ color: #161616;
 /*** Vans List ***/
 
 .vanslist--content{
-    padding: 27px;
+    padding: clamp(1em, 3vw, 1.6em);
     background-color:#FFF7ED;
     display: block;
 }
@@ -212,32 +266,38 @@ color: #161616;
 .vans--listing{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-top: 60px;
-    gap: 30px;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    gap: clamp(2em, 3vw, 6em);
+    justify-content: center;
+
 }
 
 .vanslist--quote{
     font-weight: 700;
-    font-size: 32px;
-    line-height: 34px;
+    font-size: clamp(1em, 3vw, 2em);
+    line-height: 2em;
+    margin-left: 1.25em;
 
     color: #161616;
 }
 
 .vanslist--filter{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     text-align: center;
+    margin-left: clamp(0em, 3vw, 2em);
 }
 
 .filters{
-    margin: 10px;
-    padding: 7px 25px;
+    margin: 0.6em;
+    padding: clamp(0.2em, 3vw, 0.5em) clamp(1em, 3vw, 1.5em);
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 1.5em;
     text-align: center;
-
+    border: none;
     color: #4D4D4D;
     background-color: #FFEAD0;
     border-radius: 5px;
@@ -249,7 +309,7 @@ color: #161616;
     margin: 10px;
     padding: 7px 25px;
     text-decoration: underline;
-
+    border:none;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -261,7 +321,9 @@ color: #161616;
 }
 
 .van{
-    width: 230px;
+    /* width: 230px; */
+    width: clamp(8em, 30vw, 14em);
+    /* height: clamp(16em, 30vw, 25em); */
     
 }
 
@@ -270,9 +332,14 @@ color: #161616;
     cursor: pointer;
 }
 
+.van--info{
+    /* width: clamp(5em, 30vw, 14em); */
+    /* height: clamp(16em, 30vw, 25em); */
+}
+
 .van--image{
-    width: 230px;
-    height: 230px;
+    width: clamp(8em, 30vw, 14em);
+    height: clamp(8em, 30vw, 14em); 
     border-radius: 5px;
 }
 
@@ -283,11 +350,11 @@ color: #161616;
 
 .van--price{
     margin-left: auto;
-    text-align: right;
+    /* text-align: right; */
 }
 
 .day{
-    width: 225px;
+    /* width: 225px; */
     font-weight: 500;
     font-size: 14px;
     text-align: right;
@@ -299,11 +366,11 @@ color: #161616;
 }
 
 .van--type{
-    width: 85.71px;
-    height: 33.89px;
+    width: 5em;
+    height: 2em;
     padding: 5px 10px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
     text-align: center;
     text-transform: capitalize;
     color: white;
@@ -365,8 +432,8 @@ color: #161616;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: clamp(1em, 3vw, 1.25em);
+    line-height: 2em;
 
     color: #161616;
 }
@@ -393,19 +460,19 @@ color: #161616;
 
 .vanDetails--page{
     width: 100%;
-    /* padding: 30px; */
+    /* padding: 2em; */
     background-color: #FFF7ED;
 }
 
 .selectedVan--image{
-    width: 500px;
-    height: 500px;
+    width: clamp(20em, 30vw, 31em);
+    height: clamp(20em, 30vw, 31em);;
     margin: 20px 0px;
     border-radius: 5px;
 }
 
 .van--details{
-    width: 500px;
+    width: clamp(20em, 30vw, 31em);
     margin: 0 auto 0  auto;
     padding-bottom:50px ;
 }
@@ -417,8 +484,8 @@ color: #161616;
 
 .btn--rentVan{
     text-decoration: none;
-    width: 500px;
-    height: 50px;
+    /* width: clamp(15em, 30vw, 31em); */
+    height: clamp(1em, 30vh, 3em);
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;
@@ -495,7 +562,7 @@ a.hostvan--link{
 }
 
 .vanslist--container{
-    padding: 26px;
+    padding: clamp(1em, 3vw, 1.6em);
     background-color: #FFF7ED;
 }
 
@@ -618,19 +685,21 @@ nav.vanhost--links :hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 73vh;
+    justify-content: center;
+    min-height: 76vh;
     background-color: #FFF7ED;
 
 }
 
 .login--text{
     font-weight: 700;
-    font-size: 2em;
+    font-size: clamp(1.5em, 3vw, 2em);
 }
 
 .login--form{
     display: flex;
     flex-direction: column;
+    width: clamp(15em, 90vw, 31em);
 }
 
 .username--input, .password--input{
@@ -640,8 +709,6 @@ nav.vanhost--links :hover{
     flex-direction: row;
     align-items: center;
     padding: 9px 13px;
-
-    width: 494px;
     height: 42px;
 
     background: #FFFFFF;
@@ -666,10 +733,9 @@ nav.vanhost--links :hover{
 
 .signin--button{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 20px;
     color: #FFFFFF;
-    width: 494px;
     height: 55px;
 
     background: #FF8C38;
@@ -714,13 +780,13 @@ nav.vanhost--links :hover{
 
 .income-history-text{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em;
     color: #4D4D4D;
 }
 
 .income-history-days{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
     text-decoration-line: underline;
     color: #4D4D4D;
 
@@ -728,7 +794,7 @@ nav.vanhost--links :hover{
 
 .welcome--text{
     font-weight: 700;
-    font-size: 36px;
+    font-size: 2.25em;
     line-height: 22px;
     margin: 0;
     /* identical to box height, or 61% */
@@ -777,7 +843,7 @@ nav.vanhost--links :hover{
 
 .user--rate{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25em;
     line-height: 22px;
 
     color: #161616;
@@ -786,7 +852,7 @@ nav.vanhost--links :hover{
 .rate{
     margin-left: 1em;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #4D4D4D;
 }
 
@@ -810,7 +876,7 @@ nav.vanhost--links :hover{
 }
 
 .graph-image{
-    width: 50vw;
+    width: clamp(20em, 30vw, 40em);
     text-align: center;
 }
 
@@ -819,6 +885,10 @@ nav.vanhost--links :hover{
     flex-direction: column;
     padding: 1.7em;
     row-gap: 2em;
+}
+
+.transaction-title{
+    font-size: clamp(1.2em, 3vw, 1.5em)
 }
 
 .transaction-history{
@@ -864,21 +934,25 @@ nav.vanhost--links :hover{
 
 .reviews-title{
     font-weight: 700;
-    font-size: 32px;
+    font-size: clamp(1.5em, 3vw, 2em);
     color: #161616;
 
     margin: 0;
 }
 .reviews-days{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em;
     color: #4D4D4D;
     margin: 0 0 0 1em;
 }
 
+.ratings-image{
+    width: clamp(18em, 30vw, 31em);
+}
+
 .reviews-history-days{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1em;
     text-decoration-line: underline;
     color: #4D4D4D;
 }
@@ -907,4 +981,107 @@ nav.vanhost--links :hover{
 
 .comment{
     margin-top: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .nav--vanlife{
+        display: none;
+    }
+
+    .vans--listing{
+        grid-template-columns: auto auto;
+    }
+
+    .description{
+        flex-direction: column;
+    }
+
+    .van--price{
+        margin-left: 0;
+    }
+
+    .day{
+        text-align: left;
+        margin-bottom: 1em;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {  */
+    /* .vans--listing{
+        grid-template-columns: auto auto auto;
+    } */
+/* } */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+@media only screen and (min-width: 600px) {
+    .nav--vanlife{
+        display: none;
+    }
+
+    .bars-container{
+        display: block;
+    }
+
+    .vans--listing{
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .nav--vanlife{
+        display: flex;
+    }
+
+    .vans--listing{
+        grid-template-columns: auto auto;
+    }  
+
+    .bars-container{
+        display: none;
+    }
+
+    .nav--mobile{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .nav--vanlife{
+        display: flex;
+    }
+
+    .vans--listing{
+        grid-template-columns: auto auto auto;
+    }
+
+    .bars-container{
+        display: none;
+    }
+
+    .nav--mobile{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav--vanlife{
+        display: flex;
+    }
+    .vans--listing{
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .bars-container{
+        display: none;
+    }
+
+    .nav--mobile{
+        display: none;
+    }
+    
 }
